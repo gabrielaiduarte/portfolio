@@ -43,11 +43,20 @@ An interactive calendar and task management application designed around accessib
 
 ## Built With
 
+### Development
+
 - React
 - TypeScript
 - Vite
 - React Router
 - CSS
+
+### Design
+
+- Figma
+
+### UI & Icons
+
 - Lucide React
 - Tabler Icons
 
