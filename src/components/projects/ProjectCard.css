@@ -1,0 +1,383 @@
+/* =========================
+   PROJECT CARD
+   ========================= */
+
+.project-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #d3d0da;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================
+   VISUAL
+   ========================= */
+
+.project-card-visual {
+  position: relative;
+
+  height: 185px;
+
+  margin: 1.25rem 1.25rem 0;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #dfe7fb;
+}
+
+
+/* Fake inner window */
+
+.project-card-visual::before {
+  content: "";
+
+  position: absolute;
+
+  left: 7%;
+  top: 36%;
+
+  width: 58%;
+  height: 38%;
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 0 20%,
+      rgba(255, 255, 255, 0.65) 20% 24%,
+      transparent 24% 36%,
+      rgba(255, 255, 255, 0.55) 36% 40%,
+      transparent 40% 52%,
+      rgba(255, 255, 255, 0.45) 52% 56%,
+      transparent 56% 100%
+    ),
+    rgba(255, 255, 255, 0.28);
+}
+
+
+/* Small code symbol */
+
+.project-card-visual::after {
+  content: "<>";
+
+  position: absolute;
+
+  right: 1.3rem;
+  bottom: 1.1rem;
+
+  color: #4268d5;
+
+  font-family: monospace;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+
+/* =========================
+   VISUAL COLORS
+   ========================= */
+
+.project-card:nth-child(2) .project-card-visual {
+  background: #dcefe9;
+}
+
+.project-card:nth-child(2) .project-card-visual::after {
+  color: #3c8276;
+}
+
+.project-card:nth-child(3) .project-card-visual {
+  background: #e9e1f6;
+}
+
+.project-card:nth-child(3) .project-card-visual::after {
+  content: "✦";
+  color: #775bad;
+}
+
+.project-card:nth-child(4) .project-card-visual {
+  background: #f5e2e7;
+}
+
+.project-card:nth-child(4) .project-card-visual::after {
+  color: #aa5e70;
+}
+
+
+/* =========================
+   CATEGORY
+   ========================= */
+
+.project-card-category {
+  position: absolute;
+
+  top: 1.25rem;
+  left: 1.25rem;
+
+  z-index: 2;
+
+  color: #4268d5;
+
+  font-family: monospace;
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.project-card:nth-child(2) .project-card-category {
+  color: #3c8276;
+}
+
+.project-card:nth-child(3) .project-card-category {
+  color: #775bad;
+}
+
+.project-card:nth-child(4) .project-card-category {
+  color: #aa5e70;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+
+
+/* =========================
+   META
+   ========================= */
+
+.project-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 0.9rem;
+}
+
+.project-card-number {
+  color: var(--color-text-muted);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+
+/* =========================
+   GITHUB
+   ========================= */
+
+.project-card-github {
+  width: 36px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--color-text-muted);
+
+  background: transparent;
+
+  border: 1px solid transparent;
+  border-radius: 9px;
+
+  transition:
+    color var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.project-card-github:hover {
+  transform: translateY(-2px);
+
+  color: var(--color-text);
+
+  background: var(--color-surface);
+
+  border-color: var(--color-border);
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.project-card-title {
+  margin: 0 0 0.55rem;
+
+  color: var(--color-text);
+
+  font-size: 1.45rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.project-card-description {
+  margin: 0 0 1.4rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+   ========================= */
+
+.project-card-technologies {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+
+  margin-top: auto;
+}
+
+.project-card-technology {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 32px;
+
+  padding: 0.4rem 0.7rem;
+
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+}
+
+
+/* =========================
+   LARGE CARD
+   Job Tracker
+   ========================= */
+
+.project-card-large {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.project-card-large .project-card-visual {
+  height: auto;
+  min-height: 270px;
+
+  margin: 1.25rem 0 1.25rem 1.25rem;
+}
+
+.project-card-large .project-card-content {
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+.project-card-large .project-card-title {
+  font-size: 1.65rem;
+}
+
+.project-card-large .project-card-description {
+  max-width: 520px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+  .project-card-large {
+    display: flex;
+  }
+
+  .project-card-large .project-card-visual {
+    height: 210px;
+    min-height: 0;
+
+    margin: 1.25rem 1.25rem 0;
+  }
+
+  .project-card-large .project-card-content {
+    padding: 1.25rem 1.35rem 1.4rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .project-card {
+    border-radius: 18px;
+  }
+
+  .project-card-visual,
+  .project-card-large .project-card-visual {
+    height: 180px;
+
+    margin: 1rem 1rem 0;
+  }
+
+  .project-card-content,
+  .project-card-large .project-card-content {
+    padding: 1.15rem;
+  }
+
+  .project-card-title,
+  .project-card-large .project-card-title {
+    font-size: 1.35rem;
+  }
+}

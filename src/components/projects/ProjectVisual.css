@@ -1,0 +1,419 @@
+/* =========================
+   PROJECT VISUAL
+   ========================= */
+
+.project-visual {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 0;
+}
+
+
+/* =========================
+   DECORATIVE GLOW
+   ========================= */
+
+.project-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90%;
+  height: 85%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(204, 212, 249, 0.72) 0%,
+      rgba(231, 218, 238, 0.42) 45%,
+      rgba(255, 255, 255, 0) 72%
+    );
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   APP WINDOW
+   ========================= */
+
+.project-visual-window {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 600px);
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dedde4;
+  border-radius: 18px;
+
+  box-shadow:
+    0 28px 70px rgba(48, 46, 65, 0.14),
+    0 6px 18px rgba(48, 46, 65, 0.07);
+
+  transform: rotate(1.5deg);
+}
+
+
+/* =========================
+   WINDOW HEADER
+   ========================= */
+
+.project-visual-header {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 1.15rem;
+
+  background: #fafafd;
+
+  border-bottom: 1px solid #ebeaf0;
+}
+
+.project-visual-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  color: #302f39;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.project-visual-logo {
+  width: 27px;
+  height: 27px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+
+  background: var(--color-primary);
+  color: #ffffff;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.project-visual-dots {
+  display: flex;
+
+  gap: 5px;
+}
+
+.project-visual-dots span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #c7c5ce;
+}
+
+
+/* =========================
+   WINDOW BODY
+   ========================= */
+
+.project-visual-body {
+  min-height: 400px;
+
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.project-visual-sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 1.15rem;
+
+  padding-top: 1.5rem;
+
+  background: #f8f8fb;
+
+  border-right: 1px solid #ebeaf0;
+}
+
+.project-visual-sidebar span {
+  width: 26px;
+  height: 6px;
+
+  border-radius: 999px;
+
+  background: #d8d7de;
+}
+
+.project-visual-sidebar span:first-child {
+  background: var(--color-primary);
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.project-visual-content {
+  padding: 2rem;
+}
+
+.project-visual-eyebrow {
+  margin: 0 0 0.65rem;
+
+  color: var(--color-primary);
+
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-visual-content h3 {
+  margin: 0;
+
+  color: #302f39;
+
+  font-size: 1.4rem;
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================
+   STATS
+   ========================= */
+
+.project-visual-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 0.75rem;
+
+  margin-top: 1.75rem;
+}
+
+.project-visual-stat {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.2rem;
+
+  padding: 0.9rem;
+
+  background: #fafafd;
+
+  border: 1px solid #ebeaf0;
+  border-radius: 12px;
+}
+
+.project-visual-stat strong {
+  color: #302f39;
+
+  font-size: 1rem;
+}
+
+.project-visual-stat span {
+  color: #96939e;
+
+  font-size: 0.62rem;
+}
+
+
+/* =========================
+   RECOMMENDATION
+   ========================= */
+
+.project-visual-recommendation {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  margin-top: 1rem;
+  padding: 1rem;
+
+  background: #f5f6fd;
+
+  border: 1px solid #e1e4f5;
+  border-radius: 13px;
+}
+
+.project-visual-recommendation-icon {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background: #e5e8fa;
+
+  color: var(--color-primary);
+}
+
+.project-visual-recommendation-text {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.2rem;
+}
+
+.project-visual-recommendation-text strong {
+  color: #3a3943;
+
+  font-size: 0.72rem;
+}
+
+.project-visual-recommendation-text span {
+  overflow: hidden;
+
+  color: #8a8792;
+
+  font-size: 0.62rem;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-visual-match {
+  padding: 0.35rem 0.5rem;
+
+  border-radius: 999px;
+
+  background: #e8f2dc;
+
+  color: #58713d;
+
+  font-size: 0.56rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   CONTENT LINES
+   ========================= */
+
+.project-visual-lines {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.65rem;
+
+  margin-top: 1.5rem;
+}
+
+.project-visual-lines span {
+  height: 8px;
+
+  border-radius: 999px;
+
+  background: #eeeeF2;
+}
+
+.project-visual-lines span:nth-child(1) {
+  width: 92%;
+}
+
+.project-visual-lines span:nth-child(2) {
+  width: 76%;
+}
+
+.project-visual-lines span:nth-child(3) {
+  width: 58%;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .project-visual {
+    width: min(100%, 720px);
+
+    margin-inline: auto;
+  }
+
+  .project-visual-window {
+    width: min(100%, 620px);
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .project-visual {
+    padding: 0.5rem 0;
+  }
+
+  .project-visual-window {
+    transform: none;
+  }
+
+  .project-visual-body {
+    min-height: 330px;
+
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .project-visual-content {
+    padding: 1.25rem;
+  }
+
+  .project-visual-sidebar span {
+    width: 20px;
+  }
+
+  .project-visual-stats {
+    gap: 0.4rem;
+  }
+
+  .project-visual-stat {
+    padding: 0.65rem;
+  }
+
+  .project-visual-recommendation {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .project-visual-match {
+    display: none;
+  }
+}

@@ -1,0 +1,172 @@
+/* =========================
+   DRIFTLINE OVERVIEW
+   ========================= */
+
+.case-study-overview {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.85fr);
+
+  align-items: end;
+
+  gap: 5rem;
+}
+
+
+/* =========================
+   OVERVIEW MAIN
+   ========================= */
+
+.case-study-overview-main {
+  min-width: 0;
+}
+
+.case-study-overview-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.case-study-overview-category {
+  color: var(--color-primary);
+
+  font-size: 0.72rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   OVERVIEW TITLE
+   ========================= */
+
+.case-study-overview-title {
+  margin: 0 0 1.5rem;
+
+  color: var(--color-text);
+
+  font-size: clamp(5rem, 7vw, 7.5rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+
+/* =========================
+   OVERVIEW SUMMARY
+   ========================= */
+
+.case-study-overview-summary {
+  max-width: 650px;
+
+  margin: 0 0 1.75rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.35rem;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   TECHNOLOGIES
+   ========================= */
+
+.case-study-overview-technologies {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+}
+
+
+/* =========================
+   OVERVIEW META
+   ========================= */
+
+.case-study-overview-meta {
+  width: 100%;
+
+  padding-bottom: 0.15rem;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .case-study-overview {
+    grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.8fr);
+
+    gap: 3rem;
+  }
+
+  .case-study-overview-title {
+    font-size: clamp(4.5rem, 8vw, 6.5rem);
+  }
+
+  .case-study-overview-summary {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+  .case-study-overview {
+    grid-template-columns: 1fr;
+
+    align-items: start;
+
+    gap: 3rem;
+  }
+
+  .case-study-overview-title {
+    font-size: clamp(4rem, 13vw, 6rem);
+  }
+
+  .case-study-overview-meta {
+    max-width: 600px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .case-study-overview {
+    gap: 2.5rem;
+  }
+
+  .case-study-overview-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 0.75rem;
+  }
+
+  .case-study-overview-title {
+    font-size: clamp(3.75rem, 18vw, 5.5rem);
+  }
+
+  .case-study-overview-summary {
+    font-size: 1.05rem;
+  }
+}

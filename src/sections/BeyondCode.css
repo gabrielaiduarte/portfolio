@@ -1,0 +1,450 @@
+/* =========================
+   BEYOND THE CODE
+   ========================= */
+
+.beyond {
+  position: relative;
+  padding: 2.75rem 0 3.25rem;
+  background: #f7f6f9;
+}
+
+.beyond-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   HEADING
+   ========================= */
+
+.beyond-heading {
+  max-width: 760px;
+  margin-bottom: 2.75rem;
+}
+
+.beyond-eyebrow {
+  margin: 0 0 1rem;
+
+  color: var(--color-primary);
+
+  font-family: monospace;
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.beyond-title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2.8rem, 4vw, 4rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.beyond-subtitle {
+  max-width: 600px;
+
+  margin: 1.15rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   GRID
+   ========================= */
+
+.beyond-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+
+/* =========================
+   CARD
+   ========================= */
+
+.beyond-card {
+  position: relative;
+
+  min-width: 0;
+  height: 365px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2rem;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.beyond-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 45px rgba(31, 28, 45, 0.1);
+}
+
+
+/* =========================
+   CARD COLORS
+   ========================= */
+
+.beyond-card-tennis {
+  background: #2f735b;
+  color: #ffffff;
+}
+
+.beyond-card-matcha {
+  background: #e8efd2;
+  color: #201c2c;
+}
+
+.beyond-card-diving {
+  background: #6d659e;
+  color: #ffffff;
+}
+
+
+/* =========================
+   VISUAL AREA
+   ========================= */
+
+.beyond-card-visual {
+  position: relative;
+
+  min-height: 125px;
+  flex: 1;
+}
+
+
+/* =========================
+   TENNIS BALL
+   ========================= */
+
+.beyond-tennis-ball {
+  position: absolute;
+
+  width: 175px;
+  height: 175px;
+
+  top: -65px;
+  right: -55px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  transform: rotate(-15deg);
+}
+
+
+/* =========================
+   MATCHA CUP
+   ========================= */
+
+.beyond-matcha-cup {
+  position: absolute;
+
+  width: 120px;
+  height: 76px;
+
+  top: 5px;
+  left: 0.25rem;
+
+  background: #fffdf3;
+
+  border-radius:
+    10px
+    10px
+    42px
+    42px;
+
+  transform: rotate(-4deg);
+
+  box-shadow:
+    0 10px 22px rgba(76, 84, 55, 0.07);
+}
+
+.beyond-matcha-liquid {
+  position: absolute;
+
+  width: calc(100% - 12px);
+  height: 15px;
+
+  top: 5px;
+  left: 6px;
+
+  background: #7fa447;
+
+  border-radius: 50%;
+}
+
+.beyond-matcha-handle {
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  right: -31px;
+  top: 15px;
+
+  border: 11px solid #fffdf3;
+  border-left-width: 7px;
+  border-radius: 50%;
+
+  z-index: -1;
+}
+
+
+/* =========================
+   DIVING MASK
+   ========================= */
+
+.beyond-diving-mask {
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  top: -2px;
+  right: 5px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  transform: rotate(7deg);
+}
+
+
+/* =========================
+   DIVING BUBBLES
+   ========================= */
+
+.beyond-card-diving::before,
+.beyond-card-diving::after {
+  content: "";
+
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.beyond-card-diving::before {
+  width: 42px;
+  height: 42px;
+
+  top: 50px;
+  left: 45px;
+}
+
+.beyond-card-diving::after {
+  width: 18px;
+  height: 18px;
+
+  top: 105px;
+  left: 82px;
+}
+
+
+/* =========================
+   CARD CONTENT
+   ========================= */
+
+.beyond-card-content {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 1rem;
+}
+
+
+/* =========================
+   LABEL
+   ========================= */
+
+.beyond-card-label {
+  margin: 0 0 0.65rem;
+
+  font-family: monospace;
+  font-size: 0.66rem;
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.beyond-card-tennis .beyond-card-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.beyond-card-matcha .beyond-card-label {
+  color: #7d9251;
+}
+
+.beyond-card-diving .beyond-card-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.beyond-card-title {
+  max-width: 330px;
+
+  margin: 0;
+
+  font-size: clamp(1.55rem, 2vw, 1.9rem);
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.beyond-card-tennis .beyond-card-title,
+.beyond-card-diving .beyond-card-title {
+  color: #ffffff;
+}
+
+.beyond-card-matcha .beyond-card-title {
+  color: #201c2c;
+}
+
+
+/* =========================
+   DESCRIPTION
+   ========================= */
+
+.beyond-card-description {
+  max-width: 350px;
+
+  margin: 0.85rem 0 0;
+
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.beyond-card-tennis .beyond-card-description,
+.beyond-card-diving .beyond-card-description {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.beyond-card-matcha .beyond-card-description {
+  color: #656c54;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 950px) {
+  .beyond {
+    padding: 4rem 0;
+  }
+
+  .beyond-heading {
+    margin-bottom: 3rem;
+  }
+
+  .beyond-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .beyond-card {
+    height: 390px;
+  }
+
+  .beyond-card-diving {
+    grid-column: 1 / -1;
+  }
+
+  .beyond-card-diving .beyond-card-description {
+    max-width: 500px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+  .beyond {
+    padding: 3.5rem 0;
+  }
+
+  .beyond-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .beyond-title {
+    font-size: clamp(2.7rem, 13vw, 3.8rem);
+  }
+
+  .beyond-subtitle {
+    margin-top: 1rem;
+
+    font-size: 0.95rem;
+  }
+
+  .beyond-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beyond-card,
+  .beyond-card-diving {
+    grid-column: auto;
+
+    height: 390px;
+
+    padding: 1.75rem;
+  }
+
+  .beyond-card-visual {
+    min-height: 135px;
+  }
+
+  .beyond-tennis-ball {
+    width: 165px;
+    height: 165px;
+
+    top: -55px;
+    right: -45px;
+  }
+
+  .beyond-matcha-cup {
+    width: 115px;
+    height: 73px;
+  }
+
+  .beyond-diving-mask {
+    width: 120px;
+    height: 120px;
+  }
+
+  .beyond-card-title {
+    font-size: 1.75rem;
+  }
+}

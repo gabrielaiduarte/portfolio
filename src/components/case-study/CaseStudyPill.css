@@ -1,0 +1,78 @@
+/* =========================
+   CASE STUDY PILL
+   ========================= */
+
+.case-study-pill {
+  min-height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.5rem;
+
+  padding: 0.45rem 0.75rem;
+
+  border-radius: 8px;
+
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   DEFAULT
+   ========================= */
+
+.case-study-pill-default {
+  background: #ffffff;
+
+  border: 1px solid var(--color-border);
+
+  color: var(--color-text-secondary);
+}
+
+
+/* =========================
+   STATUS / LAST UPDATED
+   ========================= */
+
+.case-study-pill-status {
+  padding: 0.55rem 0.8rem;
+
+  background: #fbfdf7;
+
+  border: 1px solid #d7e4c4;
+  border-radius: var(--radius-pill);
+
+  color: #466037;
+
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   STATUS DOT
+   ========================= */
+
+.case-study-pill-dot {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--color-green-status);
+
+  box-shadow:
+    0 0 0 4px rgba(127, 179, 61, 0.14);
+}

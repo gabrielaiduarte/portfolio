@@ -1,0 +1,54 @@
+/* =========================
+   CASE STUDY META
+   ========================= */
+
+.case-study-meta {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 1.15rem 0;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   LABEL
+   ========================= */
+
+.case-study-meta-label {
+  color: var(--color-text-muted);
+
+  font-size: 0.76rem;
+  font-weight: var(--weight-regular);
+}
+
+
+/* =========================
+   VALUE
+   ========================= */
+
+.case-study-meta-value {
+  color: var(--color-text);
+
+  font-size: 0.8rem;
+  font-weight: var(--weight-semibold);
+
+  text-align: right;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .case-study-meta {
+    gap: 1rem;
+  }
+}

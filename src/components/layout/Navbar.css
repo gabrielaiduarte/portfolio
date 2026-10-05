@@ -1,0 +1,524 @@
+.navbar {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  z-index: 1000;
+
+  width: min(1180px, calc(100% - 3rem));
+
+  transform: translateX(-50%);
+}
+
+.navbar-container {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+
+  padding: 0.65rem 0.75rem;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  border: 1px solid rgba(20, 17, 32, 0.08);
+  border-radius: 999px;
+
+  box-shadow: 0 8px 30px rgba(20, 17, 32, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* =========================
+   BRAND
+   ========================= */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  flex-shrink: 0;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: var(--color-dark);
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  text-decoration: none;
+}
+
+.navbar-name {
+  color: var(--color-text);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+   ========================= */
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.2rem;
+
+  min-width: 0;
+}
+
+.navbar-link {
+  position: relative;
+
+  padding: 0.6rem 0.7rem;
+
+  border-radius: 999px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.7rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.navbar-link:hover {
+  color: var(--color-text);
+
+  background: rgba(20, 17, 32, 0.04);
+}
+
+.navbar-link-active {
+  color: var(--color-primary);
+
+  background: rgba(108, 92, 231, 0.08);
+}
+
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 0.45rem;
+
+  flex-shrink: 0;
+}
+
+.navbar-social {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-text-secondary);
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.navbar-social:hover {
+  color: var(--color-primary);
+
+  border-color: rgba(108, 92, 231, 0.35);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE ELEMENTS
+   HIDDEN ON DESKTOP
+   ========================= */
+
+.navbar-menu-button,
+.navbar-mobile-menu {
+  display: none;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .navbar {
+    width: calc(100% - 2rem);
+  }
+
+  .navbar-container {
+    gap: 0.75rem;
+  }
+
+  .navbar-name {
+    display: none;
+  }
+
+  .navbar-link {
+    padding-inline: 0.55rem;
+
+    font-size: 0.66rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 850px) {
+  .navbar {
+    top: 0.65rem;
+    left: 50%;
+
+    width: calc(100% - 1.5rem);
+
+    transform: translateX(-50%);
+  }
+
+  .navbar-container {
+    position: relative;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+
+    gap: 0;
+
+    padding: 0.35rem 0.4rem;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid rgba(20, 17, 32, 0.08);
+    border-radius: 999px;
+
+    box-shadow: 0 8px 28px rgba(20, 17, 32, 0.08);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+      border-radius 220ms ease,
+      box-shadow 220ms ease,
+      background 220ms ease;
+  }
+
+
+  /* =========================
+     MOBILE BRAND
+     ========================= */
+
+  .navbar-brand {
+    width: fit-content;
+
+    gap: 0.65rem;
+
+    min-width: 0;
+  }
+
+  .navbar-logo {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    font-size: 0.7rem;
+  }
+
+  .navbar-name {
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--color-text);
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     HIDE DESKTOP NAV
+     ========================= */
+
+  .navbar-nav,
+  .navbar-actions {
+    display: none;
+  }
+
+
+  /* =========================
+     MENU BUTTON
+     ========================= */
+
+  .navbar-menu-button {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 1px solid rgba(20, 17, 32, 0.1);
+    border-radius: 50%;
+
+    color: var(--color-text);
+
+    cursor: pointer;
+
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .navbar-menu-button:hover {
+    color: var(--color-primary);
+
+    background: rgba(108, 92, 231, 0.06);
+
+    border-color: rgba(108, 92, 231, 0.25);
+  }
+
+  .navbar-menu-button:active {
+    transform: scale(0.95);
+  }
+
+
+  /* =========================
+     OPEN NAVBAR
+     ========================= */
+
+  .navbar-menu-open .navbar-container {
+    border-radius: 24px;
+
+    box-shadow: 0 16px 45px rgba(20, 17, 32, 0.12);
+  }
+
+
+  /* =========================
+     MOBILE MENU
+     ========================= */
+
+  .navbar-mobile-menu {
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+      grid-template-rows 240ms ease,
+      opacity 180ms ease,
+      visibility 180ms ease;
+  }
+
+  .navbar-menu-open .navbar-mobile-menu {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+
+    visibility: visible;
+  }
+
+  .navbar-mobile-links {
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    transition: padding 240ms ease;
+  }
+
+  .navbar-menu-open .navbar-mobile-links {
+    padding: 0.75rem 0.25rem 0.2rem;
+  }
+
+
+  /* =========================
+     MOBILE LINKS
+     ========================= */
+
+  .navbar-mobile-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 0.72rem 0.6rem;
+
+    border-bottom: 1px solid rgba(20, 17, 32, 0.065);
+
+    color: var(--color-text);
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    transition:
+      color 180ms ease,
+      background 180ms ease,
+      padding-left 180ms ease;
+  }
+
+  .navbar-mobile-link:first-child {
+    border-top: 1px solid rgba(20, 17, 32, 0.065);
+  }
+
+  .navbar-mobile-link:last-child {
+    border-bottom: 0;
+  }
+
+  .navbar-mobile-link:hover {
+    padding-left: 0.8rem;
+
+    color: var(--color-primary);
+
+    background: rgba(108, 92, 231, 0.035);
+  }
+
+  .navbar-mobile-link-active {
+    color: var(--color-primary);
+  }
+
+
+  /* =========================
+     MOBILE LINK ARROWS
+     ========================= */
+
+  .navbar-mobile-link-arrow {
+    flex-shrink: 0;
+
+    color: var(--color-text-secondary);
+
+    transition:
+      color 180ms ease,
+      transform 180ms ease;
+  }
+
+  .navbar-mobile-link:hover .navbar-mobile-link-arrow,
+  .navbar-mobile-link-active .navbar-mobile-link-arrow {
+    color: var(--color-primary);
+  }
+
+  .navbar-mobile-link:hover .navbar-mobile-link-arrow {
+    transform: translateX(3px);
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 400px) {
+  .navbar {
+    top: 0.55rem;
+
+    width: calc(100% - 1rem);
+  }
+
+  .navbar-container {
+    padding: 0.32rem 0.35rem;
+  }
+
+  .navbar-logo {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.68rem;
+  }
+
+  .navbar-name {
+    font-size: 0.74rem;
+  }
+
+  .navbar-menu-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navbar-menu-open .navbar-container {
+    border-radius: 22px;
+  }
+
+  .navbar-menu-open .navbar-mobile-links {
+    padding-top: 0.65rem;
+  }
+
+  .navbar-mobile-link {
+    padding: 0.68rem 0.55rem;
+
+    font-size: 0.86rem;
+  }
+}

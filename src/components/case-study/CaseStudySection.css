@@ -1,0 +1,65 @@
+/* =========================
+   CASE STUDY SECTION
+   ========================= */
+
+.case-study-section {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  padding: 2rem 0;
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+
+/* =========================
+   SECTION HEADING
+   ========================= */
+
+.case-study-section-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  margin-bottom: 3.5rem;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.case-study-section-heading span:first-child {
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .case-study-section {
+    min-height: auto;
+
+    padding: 2rem 0 4rem;
+
+    scroll-snap-align: none;
+  }
+
+  .case-study-section-heading {
+    margin-bottom: 2.5rem;
+
+    font-size: 0.7rem;
+  }
+}

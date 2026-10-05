@@ -1,0 +1,187 @@
+/* =========================
+   DRIFTLINE DECISIONS
+   ========================= */
+
+.driftline-decisions {
+  width: 100%;
+}
+
+
+/* =========================
+   INTRO
+   ========================= */
+
+.driftline-decisions-intro {
+  max-width: 1050px;
+
+  margin-bottom: 1.5rem;
+}
+
+.driftline-decisions-title {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2.6rem, 3.6vw, 4rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.driftline-decisions-description {
+  max-width: 760px;
+
+  margin: 0.8rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   DECISION LOG
+   ========================= */
+
+.driftline-decisions-log {
+  position: relative;
+
+  width: 100%;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* =========================
+   LOG HEADER
+   ========================= */
+
+.driftline-decisions-log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 0.8rem 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.62rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.driftline-decisions-order {
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   SCROLLABLE LOG
+   ========================= */
+
+.decision-log {
+  position: relative;
+
+  width: 100%;
+  max-height: 350px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-bottom: 2rem;
+
+  scroll-behavior: smooth;
+
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* IE / old Edge */
+  -ms-overflow-style: none;
+}
+
+.decision-log::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   BOTTOM FADE
+   ========================= */
+
+.driftline-decisions-log::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3rem;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 250, 248, 0),
+    #fbfaf8 90%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .driftline-decisions-title {
+    font-size: clamp(2.5rem, 4.5vw, 3.6rem);
+  }
+
+  .decision-log {
+    max-height: 340px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .driftline-decisions-intro {
+    margin-bottom: 1.25rem;
+  }
+
+  .driftline-decisions-title {
+    font-size: clamp(2.35rem, 10vw, 3.25rem);
+
+    line-height: 1.05;
+  }
+
+  .driftline-decisions-description {
+    font-size: 0.9rem;
+  }
+
+  .driftline-decisions-log-header {
+    font-size: 0.56rem;
+  }
+
+  .decision-log {
+    max-height: 390px;
+  }
+
+  .driftline-decisions-log::after {
+    height: 2.5rem;
+  }
+}

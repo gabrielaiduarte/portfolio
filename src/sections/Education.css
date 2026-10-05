@@ -1,0 +1,410 @@
+/* =========================
+   EDUCATION
+   ========================= */
+
+.education {
+  position: relative;
+
+  padding: 6rem 0 6.5rem;
+
+  background: #fcfaf8;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   HEADING
+   ========================= */
+
+.education-heading {
+  margin-bottom: 4.5rem;
+}
+
+.education-eyebrow {
+  margin: 0 0 1.25rem;
+
+  color: var(--color-primary);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.education-title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================
+   EDUCATION LIST
+   ========================= */
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+
+/* =========================
+   CARD
+   ========================= */
+
+.education-card {
+  padding: 3.2rem 3.4rem 2.5rem;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  border: 1px solid var(--color-border);
+  border-radius: 22px;
+
+  box-shadow:
+    0 20px 60px rgba(30, 27, 44, 0.05);
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.education-card-main {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.6fr)
+    minmax(340px, 1fr);
+
+  align-items: center;
+
+  gap: 3rem;
+}
+
+
+/* =========================
+   SCHOOL
+   ========================= */
+
+.education-school-group {
+  display: flex;
+  align-items: center;
+
+  gap: 1.7rem;
+
+  min-width: 0;
+}
+
+.education-icon {
+  width: 76px;
+  height: 76px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #d47791;
+  background: #f9e8ed;
+
+  border-radius: 50%;
+}
+
+.education-school-info {
+  min-width: 0;
+}
+
+.education-school {
+  margin: 0 0 0.75rem;
+
+  color: var(--color-primary);
+
+  font-size: 0.9rem;
+  font-weight: var(--weight-semibold);
+}
+
+.education-degree {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+
+  margin: 0.65rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.education-meta-dot {
+  color: var(--color-text-muted);
+}
+
+
+/* =========================
+   STATS
+   ========================= */
+
+.education-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-left: 1px solid var(--color-border);
+}
+
+.education-stat {
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-left: 2rem;
+}
+
+.education-stat + .education-stat {
+  border-left: 1px solid var(--color-border);
+}
+
+.education-stat strong {
+  color: var(--color-text);
+
+  font-size: 1.6rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.education-stat span {
+  margin-top: 0.65rem;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.65rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* =========================
+   RECOGNITION
+   ========================= */
+
+.education-recognition {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top: 2.5rem;
+  margin-left: 6.5rem;
+
+  padding-top: 1.8rem;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.education-recognition-label {
+  color: var(--color-text-muted);
+
+  font-size: 0.65rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.education-recognition-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+}
+
+.education-recognition-pill {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 34px;
+
+  padding: 0.45rem 0.85rem;
+
+  color: var(--color-text-secondary);
+  background: #f3f4f7;
+
+  border-radius: 999px;
+
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 950px) {
+  .education {
+    padding: 5rem 0;
+  }
+
+  .education-heading {
+    margin-bottom: 3.5rem;
+  }
+
+  .education-card {
+    padding: 2.5rem;
+  }
+
+  .education-card-main {
+    grid-template-columns: 1fr;
+
+    gap: 2.5rem;
+  }
+
+  .education-stats {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+
+    padding-top: 1.75rem;
+  }
+
+  .education-stat:first-child {
+    padding-left: 0;
+  }
+
+  .education-recognition {
+    margin-left: 0;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 650px) {
+  .education {
+    padding: 4rem 0;
+  }
+
+  .education-heading {
+    margin-bottom: 3rem;
+  }
+
+  .education-title {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .education-card {
+    padding: 1.75rem;
+
+    border-radius: 18px;
+  }
+
+  .education-school-group {
+    align-items: flex-start;
+
+    gap: 1.1rem;
+  }
+
+  .education-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .education-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .education-school {
+    margin-bottom: 0.5rem;
+  }
+
+  .education-degree {
+    font-size: 1.35rem;
+  }
+
+  .education-meta {
+    flex-direction: column;
+
+    gap: 0.1rem;
+  }
+
+  .education-meta-dot {
+    display: none;
+  }
+
+
+  /* Stats */
+
+  .education-stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+  }
+
+  .education-stat {
+    min-height: 72px;
+
+    padding-left: 1.25rem;
+  }
+
+  .education-stat strong {
+    font-size: 1.35rem;
+  }
+
+
+  /* Recognition */
+
+  .education-recognition {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .education-recognition-list {
+    justify-content: flex-start;
+  }
+}

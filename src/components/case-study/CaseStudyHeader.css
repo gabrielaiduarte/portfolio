@@ -1,0 +1,389 @@
+/* =========================
+   CASE STUDY HEADER
+   ========================= */
+
+.case-study-header {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.case-study-header-inner {
+  width: 100%;
+  min-height: 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding: 0 3.25rem;
+}
+
+
+/* =========================
+   BRAND
+   ========================= */
+
+.case-study-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.case-study-logo {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  background: var(--color-dark);
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1;
+}
+
+.case-study-brand-copy {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.15rem;
+}
+
+.case-study-brand-copy strong {
+  color: var(--color-text);
+
+  font-size: 1rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.2;
+}
+
+.case-study-brand-copy > span {
+  color: var(--color-text-muted);
+
+  font-size: 0.7rem;
+  font-weight: var(--weight-regular);
+
+  line-height: 1.2;
+}
+
+
+/* =========================
+   ACTIONS
+   ========================= */
+
+.case-study-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.65rem;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   GITHUB BUTTON
+   ========================= */
+
+.case-study-github {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  padding: 0 1rem;
+
+  background: #ffffff;
+  color: var(--color-text);
+
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.case-study-github svg {
+  display: block;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+}
+
+.case-study-github:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbc7d0;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================
+   BACK TO PORTFOLIO
+   ========================= */
+
+.case-study-back {
+  min-height: 46px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  padding: 0 1rem;
+
+  background: var(--color-dark);
+  color: #ffffff;
+
+  border: 1px solid var(--color-dark);
+  border-radius: 12px;
+
+  font-size: 0.85rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.case-study-back svg {
+  display: block;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  transition: transform var(--transition-fast);
+}
+
+.case-study-back:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.case-study-back:hover svg {
+  transform: translateX(-3px);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 768px) {
+  .case-study-header-inner {
+    min-height: 78px;
+
+    padding: 0 1.5rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+  .case-study-header-inner {
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding: 0 1rem;
+  }
+
+
+  /* =========================
+     BRAND
+     ========================= */
+
+  .case-study-brand {
+    min-width: 0;
+
+    gap: 0.65rem;
+  }
+
+  .case-study-logo {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    font-size: 0.78rem;
+  }
+
+  .case-study-brand-copy {
+    min-width: 0;
+  }
+
+  .case-study-brand-copy strong {
+    font-size: 0.9rem;
+
+    white-space: nowrap;
+  }
+
+  .case-study-brand-copy > span {
+    display: none;
+  }
+
+
+  /* =========================
+     ACTIONS
+     ========================= */
+
+  .case-study-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    flex-shrink: 0;
+  }
+
+
+  /* =========================
+     MOBILE ICON BUTTONS
+     ========================= */
+
+  .case-study-github,
+  .case-study-back {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 42px;
+
+    gap: 0;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 0;
+
+    border-radius: 11px;
+
+    font-size: 0;
+
+    overflow: hidden;
+  }
+
+  .case-study-github svg,
+  .case-study-back svg {
+    display: block;
+
+    flex: 0 0 auto;
+
+    margin: 0;
+
+    position: static;
+
+    transform: none;
+  }
+
+  .case-study-github svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-study-back svg {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* Disable desktop movement on touch layout */
+
+  .case-study-github:hover,
+  .case-study-back:hover {
+    transform: none;
+  }
+
+  .case-study-back:hover svg {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+   ========================= */
+
+@media (max-width: 380px) {
+  .case-study-header-inner {
+    gap: 0.75rem;
+
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  .case-study-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .case-study-brand-copy strong {
+    font-size: 0.85rem;
+  }
+
+  .case-study-header-actions {
+    gap: 0.4rem;
+  }
+
+  .case-study-github,
+  .case-study-back {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+
+    flex-basis: 40px;
+  }
+}

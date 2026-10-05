@@ -1,0 +1,225 @@
+/* =========================
+   DRIFTLINE PROBLEM
+   ========================= */
+
+.case-study-problem {
+  width: 100%;
+}
+
+
+/* =========================
+   PROBLEM TITLE
+   ========================= */
+
+.case-study-problem-title {
+  max-width: 1100px;
+
+  margin: 0 0 2.25rem;
+
+  color: var(--color-text);
+
+  font-size: clamp(2.75rem, 3.6vw, 3.9rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+
+/* =========================
+   PROBLEM GRID
+   ========================= */
+
+.case-study-problem-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: stretch;
+
+  gap: 3rem;
+}
+
+
+/* =========================
+   PROBLEM COPY
+   ========================= */
+
+.case-study-problem-copy {
+  max-width: 560px;
+
+  padding-top: 1.25rem;
+
+  border-top: 2px solid var(--color-text);
+}
+
+.case-study-problem-copy h3,
+.case-study-motivation-card h3 {
+  margin: 0 0 1rem;
+
+  color: var(--color-text);
+
+  font-size: 1.05rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.3;
+}
+
+.case-study-problem-copy p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.case-study-problem-copy p + p {
+  margin-top: 0.9rem;
+}
+
+
+/* =========================
+   MOTIVATION CARD
+   ========================= */
+
+.case-study-motivation-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.75rem 2rem;
+
+  background: #eef3ff;
+
+  border: 1px solid #dce4fa;
+  border-radius: 18px;
+}
+
+.case-study-motivation-card p {
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.case-study-motivation-card p + p {
+  margin-top: 0.9rem;
+}
+
+
+/* =========================
+   MOTIVATION NOTE
+   ========================= */
+
+.case-study-motivation-note {
+  display: flex;
+  align-items: center;
+
+  gap: 0.65rem;
+
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid #d3ddf5;
+
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.02em;
+}
+
+.case-study-motivation-icon {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .case-study-problem-title {
+    max-width: 900px;
+
+    font-size: clamp(2.6rem, 4.5vw, 3.6rem);
+  }
+
+  .case-study-problem-grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+    gap: 2.5rem;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+  .case-study-problem-title {
+    max-width: 700px;
+
+    margin-bottom: 2rem;
+  }
+
+  .case-study-problem-grid {
+    grid-template-columns: 1fr;
+
+    gap: 2rem;
+  }
+
+  .case-study-problem-copy {
+    max-width: 650px;
+
+    padding-top: 1rem;
+  }
+
+  .case-study-motivation-card {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .case-study-problem-title {
+    margin-bottom: 1.75rem;
+
+    font-size: clamp(2.35rem, 10vw, 3.25rem);
+
+    line-height: 1.05;
+  }
+
+  .case-study-problem-grid {
+    gap: 1.75rem;
+  }
+
+  .case-study-problem-copy p,
+  .case-study-motivation-card p {
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+  }
+
+  .case-study-motivation-card {
+    padding: 1.5rem;
+
+    border-radius: 14px;
+  }
+
+  .case-study-motivation-note {
+    margin-top: 1.25rem;
+  }
+}

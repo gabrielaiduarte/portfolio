@@ -1,0 +1,322 @@
+/* =========================
+   DRIFTLINE PROGRESS
+   ========================= */
+
+.driftline-progress {
+  width: 100%;
+}
+
+
+/* =========================
+   INTRO
+   ========================= */
+
+.driftline-progress-intro {
+  max-width: 1000px;
+
+  margin-bottom: 1.35rem;
+}
+
+.driftline-progress-eyebrow {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  color: var(--color-primary);
+
+  font-size: 0.62rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.driftline-progress-title {
+  max-width: 900px;
+
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(2.6rem, 3.6vw, 4rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.driftline-progress-description {
+  max-width: 720px;
+
+  margin: 0.75rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+
+/* =========================
+   CONTENT
+   ========================= */
+
+.driftline-progress-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.75fr);
+
+  align-items: stretch;
+
+  gap: 2.25rem;
+}
+
+
+/* =========================
+   ROADMAP
+   ========================= */
+
+.driftline-progress-roadmap {
+  position: relative;
+
+  min-width: 0;
+
+  border-top: 1px solid var(--color-border);
+}
+
+.driftline-progress-roadmap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 0.7rem 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.58rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.driftline-progress-roadmap-count {
+  color: var(--color-primary);
+}
+
+
+/* =========================
+   PROGRESS LIST
+   ========================= */
+
+.progress-list {
+  width: 100%;
+  max-height: 280px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding-bottom: 1.75rem;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.progress-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================
+   ROADMAP FADE
+   ========================= */
+
+.driftline-progress-roadmap::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2.5rem;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 250, 248, 0),
+    #fbfaf8 90%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   LEARNING CARD
+   ========================= */
+
+.progress-learning {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 1.75rem;
+
+  background: #211d31;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+}
+
+.progress-learning-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.25rem;
+}
+
+.progress-learning-icon {
+  color: #aaa0e8;
+}
+
+.progress-learning-label {
+  color: #aaa0e8;
+
+  font-size: 0.58rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.progress-learning-title {
+  max-width: 320px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.progress-learning-description {
+  max-width: 360px;
+
+  margin: 1rem 0 0;
+
+  color: #aaa6b4;
+
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1100px) {
+  .driftline-progress-title {
+    font-size: clamp(2.5rem, 4.5vw, 3.6rem);
+  }
+
+  .driftline-progress-content {
+    grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+
+    gap: 1.5rem;
+  }
+
+  .progress-learning {
+    padding: 1.5rem;
+  }
+}
+
+
+/* =========================
+   SMALL TABLET
+   ========================= */
+
+@media (max-width: 850px) {
+  .driftline-progress-content {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-list {
+    max-height: 300px;
+  }
+
+  .progress-learning {
+    min-height: 230px;
+  }
+
+  .progress-learning-title,
+  .progress-learning-description {
+    max-width: 600px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .driftline-progress-intro {
+    margin-bottom: 1.25rem;
+  }
+
+  .driftline-progress-title {
+    font-size: clamp(2.35rem, 10vw, 3.25rem);
+
+    line-height: 1.05;
+  }
+
+  .driftline-progress-description {
+    font-size: 0.9rem;
+  }
+
+  .driftline-progress-content {
+    gap: 1.5rem;
+  }
+
+  .driftline-progress-roadmap-header {
+    font-size: 0.54rem;
+  }
+
+  .progress-list {
+    max-height: 320px;
+  }
+
+  .progress-learning {
+    min-height: auto;
+
+    padding: 1.4rem;
+  }
+
+  .progress-learning-heading {
+    margin-bottom: 1rem;
+  }
+
+  .progress-learning-title {
+    font-size: 1.5rem;
+  }
+
+  .progress-learning-description {
+    font-size: 0.72rem;
+  }
+}

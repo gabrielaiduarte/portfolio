@@ -1,0 +1,503 @@
+/* =========================
+   EXPERIENCE
+   ========================= */
+
+.experience {
+  position: relative;
+
+  padding: 5.5rem 0 6rem;
+
+  /* Slightly darker/cooler than the About + Hero sections */
+  background: #f7f6f9;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   HEADING
+   ========================= */
+
+.experience-heading {
+  max-width: 800px;
+
+  margin-bottom: 5rem;
+}
+
+.experience-eyebrow {
+  margin: 0 0 1.15rem;
+
+  color: var(--color-primary);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: var(--weight-medium);
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.experience-title {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: clamp(3rem, 4.5vw, 4.5rem);
+  font-weight: var(--weight-bold);
+
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.experience-subtitle {
+  max-width: 650px;
+
+  margin: 1.6rem 0 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   EXPERIENCE LIST
+   ========================= */
+
+.experience-list {
+  width: 100%;
+}
+
+
+/* =========================
+   EXPERIENCE ITEM
+   ========================= */
+
+.experience-item {
+  display: grid;
+
+  grid-template-columns:
+    minmax(320px, 0.8fr)
+    minmax(0, 1.2fr);
+
+  column-gap: 1.2rem;
+
+  padding: 2.5rem 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    padding-left var(--transition-fast),
+    padding-right var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.experience-item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.experience-item:hover {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  background: rgba(92, 111, 230, 0.025);
+}
+
+
+/* =========================
+   ROLE INFO
+   ========================= */
+
+.experience-info {
+  min-width: 0;
+}
+
+
+/* =========================
+   NUMBER + ROLE ROW
+   ========================= */
+
+.experience-role-row {
+  display: grid;
+
+  grid-template-columns: 50px minmax(0, 1fr);
+
+  column-gap: 1.2rem;
+
+  align-items: start;
+}
+
+.experience-number {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 0.7rem;
+
+  padding-top: 0.3rem;
+}
+
+.experience-number span:first-child {
+  color: var(--color-text-muted);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.experience-number-line {
+  width: 16px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  margin-top: 0.45rem;
+
+  background: var(--color-primary);
+}
+
+.experience-role {
+  margin: 0;
+
+  color: var(--color-text);
+
+  font-size: 1.2rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.experience-organization {
+  margin: 0.45rem 0 0;
+  margin-left: calc(50px + 1.2rem);
+
+  color: var(--color-primary);
+
+  font-size: 0.9rem;
+  font-weight: var(--weight-semibold);
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   DATE
+   ========================= */
+
+.experience-date-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.7rem;
+
+  margin-top: 0.8rem;
+  margin-left: calc(50px + 1.2rem);
+}
+
+.experience-dates {
+  color: var(--color-text-muted);
+
+  font-family: monospace;
+  font-size: 0.75rem;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* =========================
+   CURRENT PILL
+   ========================= */
+
+.experience-current {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.4rem;
+
+  padding: 0.3rem 0.6rem;
+
+  color: #496a28;
+  background: #f5f9ed;
+
+  border: 1px solid #dbe8c8;
+  border-radius: 999px;
+
+  font-size: 0.65rem;
+  font-weight: var(--weight-semibold);
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experience-current-dot {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  background: #84bd3a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 3px rgba(132, 189, 58, 0.12);
+}
+
+
+/* =========================
+   DETAILS
+   ========================= */
+
+.experience-details {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 1.5rem;
+}
+
+.experience-description {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   TAGS
+   ========================= */
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+}
+
+.experience-tag {
+  min-height: 32px;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.35rem 0.7rem;
+
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  font-size: 0.72rem;
+  font-weight: var(--weight-medium);
+
+  white-space: nowrap;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 900px) {
+  .experience {
+    padding: 4.5rem 0 5rem;
+  }
+
+  .experience-heading {
+    margin-bottom: 4rem;
+  }
+
+  .experience-item {
+    grid-template-columns:
+      minmax(270px, 0.8fr)
+      minmax(0, 1.2fr);
+
+    gap: 1rem;
+
+    padding: 2.25rem 0;
+  }
+
+  .experience-role-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+
+    column-gap: 1rem;
+  }
+
+  .experience-organization,
+  .experience-date-row {
+    margin-left: calc(42px + 1rem);
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+  .experience {
+    padding: 4rem 0;
+  }
+
+  .experience-heading {
+    margin-bottom: 3rem;
+  }
+
+  .experience-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .experience-title {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+  }
+
+  .experience-subtitle {
+    margin-top: 1.25rem;
+
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding: 2.5rem 0;
+  }
+
+
+  /* Number + title now stay together */
+
+  .experience-role-row {
+    display: flex;
+    align-items: center;
+
+    gap: 0.9rem;
+  }
+
+  .experience-number {
+    display: flex;
+    align-items: center;
+
+    gap: 0.55rem;
+
+    flex-shrink: 0;
+
+    padding-top: 0;
+  }
+
+  .experience-number span:first-child {
+    font-size: 0.72rem;
+  }
+
+  .experience-number-line {
+    width: 18px;
+
+    margin-top: 0;
+  }
+
+  .experience-role {
+    margin: 0;
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+
+  /* Organization directly underneath */
+
+  .experience-organization {
+    margin: 0.65rem 0 0;
+
+    font-size: 0.95rem;
+  }
+
+
+  /* Date + current pill */
+
+  .experience-date-row {
+    margin-top: 0.9rem;
+    margin-left: 0;
+
+    gap: 0.7rem;
+  }
+
+  .experience-info {
+    margin-bottom: 1.6rem;
+  }
+
+
+  /* Description */
+
+  .experience-details {
+    gap: 1.25rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+
+  /* Tags */
+
+  .experience-tags {
+    gap: 0.5rem;
+  }
+
+  .experience-tag {
+    min-height: 34px;
+
+    padding: 0.4rem 0.75rem;
+  }
+
+
+  /* Disable desktop hover movement */
+
+  .experience-item:hover {
+    padding-left: 0;
+    padding-right: 0;
+
+    background: transparent;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 420px) {
+  .experience-role-row {
+    gap: 0.75rem;
+  }
+
+  .experience-number {
+    gap: 0.45rem;
+  }
+
+  .experience-number-line {
+    width: 14px;
+  }
+
+  .experience-role {
+    font-size: 1.18rem;
+  }
+}
