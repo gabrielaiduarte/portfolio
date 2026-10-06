@@ -6,7 +6,7 @@ The portfolio is designed and developed from scratch using React and TypeScript,
 
 ## Live Site
 
-Deployment coming shortly.
+[gabrielaiduarte.io](https://gabrielaiduarte.io)
 
 ## Featured Project
 
